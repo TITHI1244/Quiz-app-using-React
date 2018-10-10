@@ -1,0 +1,63 @@
+body {
+    font-size: 16px;
+    background-color: #006666;
+    color: #003333;
+    font-family: verdana;
+}
+.jumbotron {
+	height: 8em;
+	padding-top: 3em;
+
+}
+.timer {
+	border-radius: 50%;
+	background-color: #e6ffff;
+	width: 4em;
+	position: absolute;
+	right: 5%;
+	padding: 1.5em;
+	font-size: 30px;
+}
+.card-group {
+	background-color: #e6ffff;
+}
+.quiz {
+	border-color: black;
+	border-radius: 2%;
+	border-bottom: 5px;
+}
+.start, .resultBtn {
+	width: 70%;
+	margin: 40px auto;
+}
+.startBtn button, .resultBtn button {
+	color: #003333;
+	font-weight: bolder;
+}
+.startBtn button:hover, .resultBtn button:hover {
+	height: 5em;
+	background-color: #006666;
+    color: white;
+}
+.userInp {
+	width: 30em;
+	height: 3em;
+	font-size: 20px;
+	background-color: #e6ffff;
+	color: black;
+	font-weight: bolder;
+}
+.userInp:hover {
+	background-color: #006666;
+	color: #ffffff;
+}
+.result {
+	padding: 10em;
+	border: 5px dotted #e6ffff;
+	width: 70%;
+	margin: auto;
+	color: #e6ffff;
+}
+.welcome {
+	color: #ffffff;
+}
