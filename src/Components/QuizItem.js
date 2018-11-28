@@ -10,6 +10,7 @@ class QuizItem extends React.Component {
             answer: ""
         }
         this.userInput = this.userInput.bind(this);
+        this.goToNext = this.goToNext.bind(this);
     }
     userInput(e) {
         this.setState({
@@ -19,18 +20,28 @@ class QuizItem extends React.Component {
     componentDidMount() {
         this.interval = setInterval(() => 
                             this.tick(),1000
-                            );
+                        );
     }
     tick() {
         this.setState((prevState) => 
                         ( {timer: prevState.timer - 1 } )                  
-                    );
-        if( this.state.timer === 0) {
-            clearInterval(this.interval);
-            this.props.updateScore(this.state.answer);
-        }
-    }    
+                    )
+        if (parseInt(this.state.timer) === 0) {
+            this.goToNext();
+        } 
+    } 
+    goToNext() {
+        clearInterval(this.interval);
+        this.props.updateScore(this.state.answer);
+    }   
     render() {
+        var actualTimer = this.state.timer;
+        let shownTimer;
+        if(this.state.timer < 10) {
+            shownTimer = '0' + actualTimer;
+        } else {
+            shownTimer = actualTimer;
+        }
         return(
             <div>
                 {this.props.completed ? (
@@ -43,7 +54,7 @@ class QuizItem extends React.Component {
                     ) : (
                     <div>
                         <div className = "timer">
-                            {this.state.timer}
+                            {shownTimer}
                         </div>
                         <div className="card-group p-4 m-auto" 
                             style={{ width: "60%" }}>
@@ -78,6 +89,11 @@ class QuizItem extends React.Component {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div>
+                            <button className="btn btnNxt" onClick={this.goToNext}>
+                                Next
+                            </button>
                         </div>
                     </div>                 
                 )}                
