@@ -1,25 +1,33 @@
 body {
-    font-size: 16px;
     background-color: #006666;
     color: #003333;
-    font-family: verdana;
+    font-family: Palatino Linotype;
 }
 .jumbotron {
 	height: 8em;
 	padding-top: 3em;
-
+}
+.timer, .btnNxt, .btnAgain, .card-group, .userInp {
+	background-color: #e6ffff;
 }
 .timer {
 	border-radius: 50%;
-	background-color: #e6ffff;
 	width: 4em;
 	position: absolute;
 	right: 5%;
 	padding: 1.5em;
-	font-size: 30px;
+	font-size: 150%;
 }
-.card-group {
-	background-color: #e6ffff;
+.btnNxt {
+	width: 5em;
+	position: absolute;
+	right: 6%;
+	bottom: 2%;
+	font-weight: bolder;
+}
+.btnAgain {
+	width: 10em;
+	font-weight: bolder;
 }
 .quiz {
 	border-color: black;
@@ -43,7 +51,6 @@ body {
 	width: 30em;
 	height: 3em;
 	font-size: 20px;
-	background-color: #e6ffff;
 	color: black;
 	font-weight: bolder;
 }
@@ -59,5 +66,5 @@ body {
 	color: #e6ffff;
 }
 .welcome {
-	color: #ffffff;
-}
+	color: #ADFF2F;
+} 
